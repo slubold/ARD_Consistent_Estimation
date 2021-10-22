@@ -1,4 +1,4 @@
-# This code reproduces the figures used to demonstrate the consistency of the estimates of node locations and node effects (Theorem 1). 
+# This code reproduces the figures used to demonstrate the consistency of the estimates of node locations and node effects (Theorem 1 in our paper). 
 # Author: Shane Lubold (sl223@uw.edu)
 # Last updated: October 22nd, 2021.
 
