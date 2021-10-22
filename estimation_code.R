@@ -1,4 +1,6 @@
-# This code reproduces the 
+# This code reproduces the figures used to demonstrate the consistency of the estimates of node locations and node effects (Theorem 1). 
+# Author: Shane Lubold (sl223@uw.edu)
+# Last updated: October 22nd, 2021.
 
 func1 = function(z_0){ # this function simulates from the distribution of the first group N(-2, 1/3) and returns the average probability of connection from nodes in this group to the reference node at (0, 0)
   z = matrix(rnorm(2 * M, 2, 1/3), ncol = 2)
