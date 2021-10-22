@@ -1,3 +1,5 @@
+# This code reproduces the 
+
 func1 = function(z_0){ # this function simulates from the distribution of the first group N(-2, 1/3) and returns the average probability of connection from nodes in this group to the reference node at (0, 0)
   z = matrix(rnorm(2 * M, 2, 1/3), ncol = 2)
   dist.temp = apply(t(z), 2, function(center) { norm(z_0 - center, "2")})
@@ -64,9 +66,7 @@ dev.off()
 
 
 
-
-
-# Now let's estimate the node effects 
+## Now let's estimate the node effects 
 estimate_nu = function(n, numSim, nu.0){
 
   nu.hat = rep(0, numSim)
