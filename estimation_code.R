@@ -1,6 +1,6 @@
-M = 10^4 
+M = 10^4 # number of Monte Carlo simulations used to approximate integrals.
 
-func1 = function(z_0){
+func1 = function(z_0){ # this function simulates from the distribution of the first group N(-2, 1/3) and returns the average probability of connection from nodes in this group to the reference node at (0, 0)
 
   z = matrix(rnorm(2 * M, 2, 1/3), ncol = 2)
 
@@ -18,7 +18,7 @@ func1 = function(z_0){
 
 
 
-func2 = function(z_0){
+func2 = function(z_0){ # this function simulates from the distribution of the second group N(-2, 1/3) and returns the average probability of connection from nodes in this group to the reference node at (0, 0)
 
   z = matrix(rnorm(2 * M, -2, 1/3), ncol = 2)
 
@@ -40,7 +40,7 @@ func2 = function(z_0){
 
 
 
-func = function(z_0){
+func = function(z_0){ # this function returns the difference between the ratio of link probabilities from the reference node to groups 1 and 2 and substracts the observed frequency of edges to groups 1 and 2. This is the objective function whose zero is the estimate of the node location. 
 
   return(abs(func1(z_0) / func2(z_0) - exp(a)))
 
